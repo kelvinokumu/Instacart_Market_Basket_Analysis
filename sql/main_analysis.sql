@@ -1,5 +1,6 @@
 -- 1. Market Basket Analysis:
 
+
 -- Top 5 Products Most Commonly Added to the Cart First
 SELECT P.product_name, COUNT(*) AS first_add_count
 FROM Order_products_prior OP
@@ -18,7 +19,6 @@ FROM (
 ) AS subquery;
 
 -- 2. Customer Segmentation:
-
 --  categorize customers based on the total amount they've spent on orders
 WITH TotalAmountSpent AS (
   SELECT user_id, SUM(OPP.product_id) AS total_amount_spent
@@ -85,14 +85,3 @@ FROM (
   GROUP BY user_id
 ) AS CustomerSegments
 GROUP BY customer_segment;
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,6 @@
---1 Top Reordered Products
+USE instacart_market_basket_analysis;
+
+-- 1 Top Reordered Products
 SELECT P.product_id, P.product_name, COUNT(*) AS total_reorders
 FROM Order_products_prior OPP
 JOIN Products P ON OPP.product_id = P.product_id
