@@ -3,19 +3,19 @@ CREATE DATABASE instacart_market_basket_analysis;
 USE instacart_market_basket_analysis;
 
 -- Create the Aisles table
-CREATE TABLE Aisles (
+CREATE TABLE aisles (
     aisle_id INT PRIMARY KEY,
     aisle VARCHAR(255)
 );
 
 -- Create the Departments table
-CREATE TABLE Departments (
+CREATE TABLE departments (
     department_id INT PRIMARY KEY,
     department VARCHAR(255)
 );
 
 -- Create the Products table
-CREATE TABLE Products (
+CREATE TABLE products (
     product_id INT PRIMARY KEY,
     product_name VARCHAR(255),
     aisle_id INT,
@@ -25,7 +25,7 @@ CREATE TABLE Products (
 );
 
 -- Create the Order_products_prior table
-CREATE TABLE Order_products_prior (
+CREATE TABLE order_products_prior (
     order_id INT,
     product_id INT,
     add_to_cart_order INT,
@@ -35,7 +35,7 @@ CREATE TABLE Order_products_prior (
 );
 
 -- Create the Order_products_train table
-CREATE TABLE Order_products_train (
+CREATE TABLE order_products_train (
     order_id INT,
     product_id INT,
     add_to_cart_order INT,
@@ -45,7 +45,7 @@ CREATE TABLE Order_products_train (
 );
 
 -- Create the Orders table
-CREATE TABLE Orders (
+CREATE TABLE orders (
     order_id INT PRIMARY KEY,
     user_id INT,
     eval_set VARCHAR(255),
