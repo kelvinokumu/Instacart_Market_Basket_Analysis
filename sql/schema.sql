@@ -18,14 +18,14 @@ CREATE TABLE orders (
     days_since_prior_order FLOAT
 );
 
-CREATE TABLE order_products__prior (
+CREATE TABLE order_products_prior (
     order_id INTEGER,
     product_id INTEGER,
     add_to_cart_order INTEGER,
     reordered INTEGER
 );
 
-CREATE TABLE order_products__train (
+CREATE TABLE order_products_train (
     order_id INTEGER,
     product_id INTEGER,
     add_to_cart_order INTEGER,
